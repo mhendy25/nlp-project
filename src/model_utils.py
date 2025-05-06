@@ -21,7 +21,7 @@ class OllamaModel:
         try:
             response = requests.post(url, json=payload)
             # response.raise_for_status()
-            return response.json()['response']
+            return response.json()
         except requests.exceptions.RequestException as e:
             print(f"Error calling Ollama API: {e}")
             return None
@@ -67,6 +67,7 @@ class OllamaModel:
         except requests.exceptions.RequestException as e:
             print(f"Error downloading model: {e}")
             return False
-        
-model = OllamaModel(model_name = "llama3.2:1b")
-print(model.generate(prompt = "how are you?"))
+
+if __name__ == "__main__":
+    model = OllamaModel(model_name = "llama3.2:1b")
+    print(model.generate(prompt = "how are you?"))
