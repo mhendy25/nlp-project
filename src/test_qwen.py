@@ -5,6 +5,7 @@ qwen = model_utils.OllamaModel(model_name = "qwen3:1.7b")
 
 train, validation, test = pd.read_csv("./data/train.csv"), pd.read_csv("./data/validation.csv"), pd.read_csv("./data/test.csv") 
 correct = 0 
+yapping = 0
 for i in range(100):
     #print("LABEL:", test['label_text'][i])
     text1, text2, label_text = test['text1'][i][:-2],test['text2'][i][:-2].strip(), str(test['label_text'][i]).strip()
@@ -24,7 +25,8 @@ text2: {text2}."""
     
         
     print(f"model: {response['response']}, ground truth: {label_text}")
+    if response['response'] not in ["not equivalent","equivalent"]: yapping += 1
     if response['response'] == label_text: correct += 1 
 print(f"the accuracy is {correct/100}")
     
-
+print(f"the chances of yapping is {yapping/100}")
