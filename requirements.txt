@@ -13,7 +13,7 @@ huggingface-hub==0.30.2
 idna==3.10
 multidict==6.4.3
 multiprocess==0.70.16
-numpy==2.2.5
+numpy
 packaging==25.0
 pandas==2.2.3
 propcache==0.3.1
