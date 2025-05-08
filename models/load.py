@@ -1,8 +1,8 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
-model = AutoModelForCausalLM.from_pretrained("./llama3-local", device_map="auto")
-tokenizer = AutoTokenizer.from_pretrained("./llama3-local")
+model = AutoModelForCausalLM.from_pretrained("./Meta-Llama-3-3B", device_map="auto")
+tokenizer = AutoTokenizer.from_pretrained("./Meta-Llama-3-3B")
 
 
 # Prepare a small test set

@@ -21,5 +21,5 @@ for prompt in test_prompts:
     inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
     outputs = model.generate(**inputs, max_new_tokens=100)
     print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-model.save_pretrained("./llama3-local")
-tokenizer.save_pretrained("./llama3-local")
+model.save_pretrained("./Meta-Llama-3-3B")
+tokenizer.save_pretrained("./Meta-Llama-3-3B")
