@@ -21,7 +21,7 @@ lora_config = LoRAConfig(
 from unsloth import prepare_dataset
 
 dataset = prepare_dataset(
-    path="try_dataset.json", 
+    path="./converted/train.json", 
     tokenizer=tokenizer,
     chat_template="qwen3"
 )
