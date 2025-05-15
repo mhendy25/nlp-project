@@ -1,6 +1,6 @@
-# NLP Paraphrase Detection Project
+# Evaluating Locally Deployable LLMs on the Microsoft Research Paraphrase Corpus
 
-A project for fine-tuning and evaluating language models on the Microsoft Research Paraphrase Corpus (MRPC) for paraphrase detection.
+A project for fine-tuning and evaluating *light-weight* language models on the Microsoft Research Paraphrase Corpus (MRPC) for paraphrase detection.
 
 ## Project Overview
 
