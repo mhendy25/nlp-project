@@ -9,13 +9,12 @@ class OllamaModel:
         self.base_url = "http://localhost:11434/api"
         if not self.check_model_availability():
                 self.download_model()
-    def generate(self, prompt, system, max_tokens=100, temperature=0.7):
+    def generate(self, prompt, max_tokens=100, temperature=0.7):
         """Generate text from the model using Ollama API."""
         url = f"{self.base_url}/generate"
         
         payload = {
             "model": self.model_name,
-            "system": system,
             "prompt": prompt,
             "stream": False
         }
